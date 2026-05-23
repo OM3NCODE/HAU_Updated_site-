@@ -61,7 +61,7 @@ const Footer = () => {
                 <span className="text-sm font-bold">Discord</span>
               </a>
               <a
-                href="#"
+                href="https://t.me/HighAsUnicorns"
                 className="flex items-center justify-center h-10 px-4 gap-2 rounded-full bg-black/40 border border-brand-purple/20 text-tint-neutral hover:text-[#f2a900] hover:border-[#f2a900]/60 hover:bg-black/60 shadow-md hover:scale-110 transition-all duration-300 hover:shadow-[0_0_15px_rgba(242,169,0,0.4)]"
                 aria-label="Telegram"
               >

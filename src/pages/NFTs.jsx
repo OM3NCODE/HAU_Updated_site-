@@ -305,7 +305,7 @@ const NFTs = () => {
                   {/* Quick Action Overlay */}
                   <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <a
-                      href={`https://magiceden.io/marketplace/hauwees?name=Hauwee%20%23${nft.id}`}
+                      href={`https://magiceden.io/marketplace/hauwee?search=%22${nft.id}%22`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-gradient-to-r from-[#ff00fc] to-brand-purple hover:scale-105 text-white font-extrabold text-sm px-5 py-2.5 rounded-full flex items-center gap-2 shadow-lg transition-transform"
@@ -357,7 +357,7 @@ const NFTs = () => {
                   </div>
 
                   <a
-                    href={`https://magiceden.io/marketplace/hauwees?name=Hauwee%20%23${nft.id}`}
+                    href={`https://magiceden.io/marketplace/hauwee?search=%22${nft.id}%22`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-xs font-mono text-nft-orange uppercase tracking-wider font-bold hover:underline inline-flex items-center gap-1 group-hover:text-white transition-colors"
