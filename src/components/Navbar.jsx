@@ -50,13 +50,13 @@ const Navbar = () => {
           <Link to="/" className={`flex items-center gap-2 sm:gap-2.5 group transition-opacity duration-300 ${isOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
             <div className={`rounded-full border-2 border-brand-purple overflow-hidden flex items-center justify-center bg-nft-orange shadow-xl hover:scale-105 transition-all duration-300 flex-shrink-0 ${scrolled ? 'w-8 h-8' : 'w-10 h-10 sm:w-11 sm:h-11 border-2 sm:border-4'}`}>
               <img 
-                src="/assets/hauwee_unicorn_avatar.png" 
+                src={`${import.meta.env.BASE_URL}assets/hauwee_unicorn_avatar.png`} 
                 alt="Unicorn Icon" 
                 className="w-full h-full object-cover scale-105 group-hover:scale-110 transition-transform" 
               />
             </div>
             <img 
-              src="/assets/HAU%20Logo.png" 
+              src={`${import.meta.env.BASE_URL}assets/HAU%20Logo.png`} 
               alt="HIGH AS UNICORN" 
               className={`h-auto object-contain transition-all duration-300 flex-shrink-0 max-w-[120px] min-[360px]:max-w-[150px] min-[400px]:max-w-[180px] sm:max-w-none ${scrolled ? 'h-[16px] sm:h-[20px]' : 'h-[22px] sm:h-6 md:h-7.5'}`} 
             />

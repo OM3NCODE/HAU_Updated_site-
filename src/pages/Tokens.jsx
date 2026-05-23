@@ -42,7 +42,7 @@ const Tokens = () => {
               </div>
               <div className="w-16 h-16 rounded-full border-2 border-brand-purple overflow-hidden flex items-center justify-center bg-nft-orange shadow-lg shadow-brand-purple/20 flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
                 <img 
-                  src="/assets/hauwee_unicorn_avatar.png" 
+                  src={`${import.meta.env.BASE_URL}assets/hauwee_unicorn_avatar.png`} 
                   alt="Hauwee Icon" 
                   className="w-full h-full object-cover scale-105" 
                 />
@@ -97,7 +97,7 @@ const Tokens = () => {
               </div>
               <div className="w-16 h-16 rounded-full border-2 border-token-ubp overflow-hidden flex items-center justify-center bg-black/40 shadow-lg shadow-token-ubp/25 flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
                 <img 
-                  src="/assets/ubp_logo.jpg" 
+                  src={`${import.meta.env.BASE_URL}assets/ubp_logo.jpg`} 
                   alt="UBP Icon" 
                   className="w-full h-full object-cover" 
                 />

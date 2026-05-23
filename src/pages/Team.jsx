@@ -4,14 +4,14 @@ import Button from '../components/Button';
 
 const Team = () => {
   const coreTeam = [
-    { name: "Chris", role: "Core Team", countryCodes: ["us", "sg"], xHandle: "@PengWine", image: "/assets/hauwee_hero.png" },
-    { name: "Veronika", role: "Core Team", countryCodes: ["gb"], xHandle: "@VeronikaLKLK", image: "/assets/hauwee_hero.png" },
-    { name: "Sean", role: "Core Team", countryCodes: ["us"], xHandle: "@cryptoverlordx", image: "/assets/hauwee_hero.png" },
-    { name: "Adhish", role: "Core Team", countryCodes: ["in"], xHandle: "@IamAdhish2005", image: "/assets/hauwee_hero.png" },
-    { name: "4G", role: "Core Team", countryCodes: ["ng"], xHandle: "@4G_OFWeb3", image: "/assets/hauwee_hero.png" },
-    { name: "Shashank", role: "Core Team", countryCodes: ["in"], xHandle: "@shanks_ssk", image: "/assets/hauwee_hero.png" },
-    { name: "Lorin", role: "Core Team", countryCodes: ["sg"], xHandle: "@LorinWeb3", image: "/assets/hauwee_hero.png" },
-    { name: "Ziggy", role: "Core Team", countryCodes: ["sg"], xHandle: "@ziggy_hau", image: "/assets/hauwee_hero.png" },
+    { name: "Chris", role: "Core Team", countryCodes: ["us", "sg"], xHandle: "@PengWine", image: `${import.meta.env.BASE_URL}assets/hauwee_hero.png` },
+    { name: "Veronika", role: "Core Team", countryCodes: ["gb"], xHandle: "@VeronikaLKLK", image: `${import.meta.env.BASE_URL}assets/hauwee_hero.png` },
+    { name: "Sean", role: "Core Team", countryCodes: ["us"], xHandle: "@cryptoverlordx", image: `${import.meta.env.BASE_URL}assets/hauwee_hero.png` },
+    { name: "Adhish", role: "Core Team", countryCodes: ["in"], xHandle: "@IamAdhish2005", image: `${import.meta.env.BASE_URL}assets/hauwee_hero.png` },
+    { name: "4G", role: "Core Team", countryCodes: ["ng"], xHandle: "@4G_OFWeb3", image: `${import.meta.env.BASE_URL}assets/hauwee_hero.png` },
+    { name: "Shashank", role: "Core Team", countryCodes: ["in"], xHandle: "@shanks_ssk", image: `${import.meta.env.BASE_URL}assets/hauwee_hero.png` },
+    { name: "Lorin", role: "Core Team", countryCodes: ["sg"], xHandle: "@LorinWeb3", image: `${import.meta.env.BASE_URL}assets/hauwee_hero.png` },
+    { name: "Ziggy", role: "Core Team", countryCodes: ["sg"], xHandle: "@ziggy_hau", image: `${import.meta.env.BASE_URL}assets/hauwee_hero.png` },
   ];
 
   const TeamCard = ({ member, index }) => {

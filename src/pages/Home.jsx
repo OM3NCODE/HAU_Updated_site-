@@ -165,8 +165,8 @@ const Home = () => {
         {/* Background Loop Video */}
         <div className="absolute inset-0 z-0 bg-black overflow-hidden flex items-center justify-center">
           <video autoPlay loop muted playsInline preload="metadata" className="absolute inset-0 w-full h-full object-cover z-0 opacity-45">
-            <source src="/assets/Hero_video/Webpage hero bgvideo.webm" type="video/webm" />
-            <source src="/assets/Hero_video/Webpage hero bgvideo.mp4" type="video/mp4" />
+            <source src={`${import.meta.env.BASE_URL}assets/Hero_video/Webpage hero bgvideo.webm`} type="video/webm" />
+            <source src={`${import.meta.env.BASE_URL}assets/Hero_video/Webpage hero bgvideo.mp4`} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
 
@@ -410,7 +410,7 @@ const Home = () => {
                 preload="metadata"
                 className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
               >
-                <source src="/assets/Game/Webpage game  bgvideo.mp4" type="video/mp4" />
+                <source src={`${import.meta.env.BASE_URL}assets/Game/Webpage game  bgvideo.mp4`} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
               <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-10">
@@ -449,28 +449,28 @@ const Home = () => {
             </div>
             <div className="flex space-x-16 animate-marquee whitespace-nowrap opacity-80 relative z-10 items-center">
               {[
-                { name: 'CFC', logo: '/assets/partners/cfc.png' },
-                { name: 'RANDY AI', logo: '/assets/partners/randyai.png' },
-                { name: 'LFGO', logo: '/assets/partners/lfgo.png' },
-                { name: 'CLUSTERFUCK', logo: '/assets/partners/clusterfuck.png' },
-                { name: 'Sir Nasty', logo: '/assets/partners/sirnasty.png' },
-                { name: 'WGA', logo: '/assets/partners/wga.png' },
-                { name: 'Meta Muses', logo: '/assets/partners/metamuses.png' },
-                { name: 'GROKLET', logo: '/assets/partners/groklet.png' },
-                { name: 'MARS', logo: '/assets/partners/mars.png' },
-                { name: "WEB3 WOMEN'S DAY", logo: '/assets/partners/w3wd.png' },
+                { name: 'CFC', logo: `${import.meta.env.BASE_URL}assets/partners/cfc.png` },
+                { name: 'RANDY AI', logo: `${import.meta.env.BASE_URL}assets/partners/randyai.png` },
+                { name: 'LFGO', logo: `${import.meta.env.BASE_URL}assets/partners/lfgo.png` },
+                { name: 'CLUSTERFUCK', logo: `${import.meta.env.BASE_URL}assets/partners/clusterfuck.png` },
+                { name: 'Sir Nasty', logo: `${import.meta.env.BASE_URL}assets/partners/sirnasty.png` },
+                { name: 'WGA', logo: `${import.meta.env.BASE_URL}assets/partners/wga.png` },
+                { name: 'Meta Muses', logo: `${import.meta.env.BASE_URL}assets/partners/metamuses.png` },
+                { name: 'GROKLET', logo: `${import.meta.env.BASE_URL}assets/partners/groklet.png` },
+                { name: 'MARS', logo: `${import.meta.env.BASE_URL}assets/partners/mars.png` },
+                { name: "WEB3 WOMEN'S DAY", logo: `${import.meta.env.BASE_URL}assets/partners/w3wd.png` },
                 { name: 'More to come 🙂', logo: null },
                 // Duplicated to create seamless loop
-                { name: 'CFC', logo: '/assets/partners/cfc.png' },
-                { name: 'RANDY AI', logo: '/assets/partners/randyai.png' },
-                { name: 'LFGO', logo: '/assets/partners/lfgo.png' },
-                { name: 'CLUSTERFUCK', logo: '/assets/partners/clusterfuck.png' },
-                { name: 'Sir Nasty', logo: '/assets/partners/sirnasty.png' },
-                { name: 'WGA', logo: '/assets/partners/wga.png' },
-                { name: 'Meta Muses', logo: '/assets/partners/metamuses.png' },
-                { name: 'GROKLET', logo: '/assets/partners/groklet.png' },
-                { name: 'MARS', logo: '/assets/partners/mars.png' },
-                { name: "WEB3 WOMEN'S DAY", logo: '/assets/partners/w3wd.png' },
+                { name: 'CFC', logo: `${import.meta.env.BASE_URL}assets/partners/cfc.png` },
+                { name: 'RANDY AI', logo: `${import.meta.env.BASE_URL}assets/partners/randyai.png` },
+                { name: 'LFGO', logo: `${import.meta.env.BASE_URL}assets/partners/lfgo.png` },
+                { name: 'CLUSTERFUCK', logo: `${import.meta.env.BASE_URL}assets/partners/clusterfuck.png` },
+                { name: 'Sir Nasty', logo: `${import.meta.env.BASE_URL}assets/partners/sirnasty.png` },
+                { name: 'WGA', logo: `${import.meta.env.BASE_URL}assets/partners/wga.png` },
+                { name: 'Meta Muses', logo: `${import.meta.env.BASE_URL}assets/partners/metamuses.png` },
+                { name: 'GROKLET', logo: `${import.meta.env.BASE_URL}assets/partners/groklet.png` },
+                { name: 'MARS', logo: `${import.meta.env.BASE_URL}assets/partners/mars.png` },
+                { name: "WEB3 WOMEN'S DAY", logo: `${import.meta.env.BASE_URL}assets/partners/w3wd.png` },
                 { name: 'More to come 🙂', logo: null }
               ].map((partner, i) => {
                 // Dynamic retro color cycle matching the brand scheme

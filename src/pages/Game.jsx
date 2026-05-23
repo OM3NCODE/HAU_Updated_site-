@@ -19,7 +19,7 @@ const Game = () => {
             preload="metadata"
             className="absolute inset-0 w-full h-full object-cover z-0 opacity-40"
           >
-            <source src="/assets/Game/Webpage game  bgvideo.mp4" type="video/mp4" />
+            <source src={`${import.meta.env.BASE_URL}assets/Game/Webpage game  bgvideo.mp4`} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
 
@@ -68,7 +68,7 @@ const Game = () => {
           <div className="flex-1 order-1 lg:order-2 w-full flex justify-center lg:justify-end">
             <div className="relative rounded-3xl overflow-hidden border-4 border-token-ubp/45 shadow-[0_0_35px_rgba(13,148,136,0.3)] hover:shadow-[0_0_50px_rgba(13,148,136,0.45)] transition-all duration-500 w-full max-w-xl lg:max-w-none transform hover:scale-[1.02]">
               <img
-                src="/assets/Game/download.gif"
+                src={`${import.meta.env.BASE_URL}assets/Game/download.gif`}
                 alt="Hauwee's Lava Run Gameplay loop"
                 className="w-full h-auto object-cover"
               />
