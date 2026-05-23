@@ -1,0 +1,6 @@
+# Normalize line endings for all files
+* text=auto
+
+# Force LF for workflow files (critical for Linux runners)
+*.yml text eol=lf
+*.yaml text eol=lf
