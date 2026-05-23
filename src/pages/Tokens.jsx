@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Copy, Check } from 'lucide-react';
 import Button from '../components/Button';
-import { assetUrl } from '../utils/assetUrl';
 
 const Tokens = () => {
   const [copiedHau, setCopiedHau] = useState(false);
@@ -43,7 +42,7 @@ const Tokens = () => {
               </div>
               <div className="w-16 h-16 rounded-full border-2 border-brand-purple overflow-hidden flex items-center justify-center bg-nft-orange shadow-lg shadow-brand-purple/20 flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
                 <img 
-                  src={assetUrl('/assets/hauwee_unicorn_avatar.png')} 
+                  src="/src/assets/hauwee_unicorn_avatar.png" 
                   alt="Hauwee Icon" 
                   className="w-full h-full object-cover scale-105" 
                 />
@@ -98,7 +97,7 @@ const Tokens = () => {
               </div>
               <div className="w-16 h-16 rounded-full border-2 border-token-ubp overflow-hidden flex items-center justify-center bg-black/40 shadow-lg shadow-token-ubp/25 flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
                 <img 
-                  src={assetUrl('/assets/ubp_logo.jpg')} 
+                  src="/src/assets/ubp_logo.jpg" 
                   alt="UBP Icon" 
                   className="w-full h-full object-cover" 
                 />

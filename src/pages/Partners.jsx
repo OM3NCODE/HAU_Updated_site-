@@ -1,20 +1,19 @@
 import React from 'react';
 import { ExternalLink, Handshake, Mail } from 'lucide-react';
 import Button from '../components/Button';
-import { assetUrl } from '../utils/assetUrl';
 
 const Partners = () => {
   const partners = [
-    { name: "CFC", logo: assetUrl('/assets/partners/cfc.png'), color: "from-[#2fff37]/20 to-[#15803d]/40" },
-    { name: "RANDY AI", logo: assetUrl('/assets/partners/randyai.png'), color: "from-[#f2a900]/20 to-[#ea580c]/40" },
-    { name: "LFGO", logo: assetUrl('/assets/partners/lfgo.png'), color: "from-[#0d9488]/20 to-[#0f766e]/40" },
-    { name: "CLUSTERFUCK", logo: assetUrl('/assets/partners/clusterfuck.png'), color: "from-[#ff00fc]/20 to-[#db2777]/40" },
-    { name: "Sir Nasty", logo: assetUrl('/assets/partners/sirnasty.png'), color: "from-[#38bdf8]/20 to-[#0284c7]/40" },
-    { name: "WGA", logo: assetUrl('/assets/partners/wga.png'), color: "from-[#2fff37]/20 to-[#16a34a]/40" },
-    { name: "Meta Muses", logo: assetUrl('/assets/partners/metamuses.png'), color: "from-[#ff00fc]/20 to-[#c026d3]/40" },
-    { name: "GROKLET", logo: assetUrl('/assets/partners/groklet.png'), color: "from-[#00f2fe]/20 to-[#4facfe]/40" },
-    { name: "MARS", logo: assetUrl('/assets/partners/mars.png'), color: "from-[#ff9966]/20 to-[#ff5e62]/40" },
-    { name: "WEB3 WOMEN'S DAY", logo: assetUrl('/assets/partners/w3wd.png'), color: "from-[#800020]/20 to-[#4a0010]/40" }
+    { name: "CFC", logo: "/src/assets/partners/cfc.png", color: "from-[#2fff37]/20 to-[#15803d]/40" },
+    { name: "RANDY AI", logo: "/src/assets/partners/randyai.png", color: "from-[#f2a900]/20 to-[#ea580c]/40" },
+    { name: "LFGO", logo: "/src/assets/partners/lfgo.png", color: "from-[#0d9488]/20 to-[#0f766e]/40" },
+    { name: "CLUSTERFUCK", logo: "/src/assets/partners/clusterfuck.png", color: "from-[#ff00fc]/20 to-[#db2777]/40" },
+    { name: "Sir Nasty", logo: "/src/assets/partners/sirnasty.png", color: "from-[#38bdf8]/20 to-[#0284c7]/40" },
+    { name: "WGA", logo: "/src/assets/partners/wga.png", color: "from-[#2fff37]/20 to-[#16a34a]/40" },
+    { name: "Meta Muses", logo: "/src/assets/partners/metamuses.png", color: "from-[#ff00fc]/20 to-[#c026d3]/40" },
+    { name: "GROKLET", logo: "/src/assets/partners/groklet.png", color: "from-[#00f2fe]/20 to-[#4facfe]/40" },
+    { name: "MARS", logo: "/src/assets/partners/mars.png", color: "from-[#ff9966]/20 to-[#ff5e62]/40" },
+    { name: "WEB3 WOMEN'S DAY", logo: "/src/assets/partners/w3wd.png", color: "from-[#800020]/20 to-[#4a0010]/40" }
   ];
 
   return (

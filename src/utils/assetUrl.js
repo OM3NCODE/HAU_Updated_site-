@@ -1,1 +1,0 @@
-export const assetUrl = (path) => new URL(`../${path.replace(/^\//, '')}`, import.meta.url).href

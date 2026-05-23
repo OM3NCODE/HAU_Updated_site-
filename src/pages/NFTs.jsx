@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { TrendingUp, Gift, Users, Star, Lock, Sparkles, Info, Eye, ExternalLink } from 'lucide-react';
 import Button from '../components/Button';
 import { useNFTStats } from '../hooks/useNFTStats';
-import { assetUrl } from '../utils/assetUrl';
 
 // Curated Showcase NFT Data
 const nftData = [
@@ -11,7 +10,7 @@ const nftData = [
     id: "272",
     name: "Hauwee #272",
     type: "Super Rare",
-    img: assetUrl('/assets/NFTs/Super_rare/272.png'),
+    img: "/src/assets/NFTs/Super_rare/272.png",
     traitLabel: "Rainbow Pengwine Bottle",
     traitType: "Horn",
     desc: "A legendary PFP showing off the ultra-rare Rainbow Pengwine Bottle trait. Instantly recognizable and highly valuable."
@@ -20,7 +19,7 @@ const nftData = [
     id: "241",
     name: "Hauwee #241",
     type: "Super Rare",
-    img: assetUrl('/assets/NFTs/Super_rare/241.png'),
+    img: "/src/assets/NFTs/Super_rare/241.png",
     traitLabel: "Unicorn Fart Horn",
     traitType: "Horn Trait",
     desc: "An elite combination styled with the legendary, glowing Unicorn Fart Horn. One of the crown jewels of the collection."
@@ -29,7 +28,7 @@ const nftData = [
     id: "237",
     name: "Hauwee #237",
     type: "Super Rare",
-    img: assetUrl('/assets/NFTs/Super_rare/237.png'),
+    img: "/src/assets/NFTs/Super_rare/237.png",
     traitLabel: "Cactus Horn",
     traitType: "Horn Trait",
     desc: "An exceptionally unique digital artwork displaying the sharp and highly sought-after Cactus Horn trait."
@@ -39,7 +38,7 @@ const nftData = [
     id: "76",
     name: "Hauwee #76",
     type: "Community Collab",
-    img: assetUrl('/assets/NFTs/Community_Collab/76.png'),
+    img: "/src/assets/NFTs/Community_Collab/76.png",
     traitLabel: "$LFGO & $VAI",
     traitType: "Collab Edition",
     desc: "Celebrating HAU's close integrations and crossover partner communities."
@@ -48,7 +47,7 @@ const nftData = [
     id: "253",
     name: "Hauwee #253",
     type: "Community Collab",
-    img: assetUrl('/assets/NFTs/Community_Collab/253.png'),
+    img: "/src/assets/NFTs/Community_Collab/253.png",
     traitLabel: "CFC",
     traitType: "Collab Edition",
     desc: "Custom-tailored crossover blending community culture with partner aesthetics."
@@ -57,7 +56,7 @@ const nftData = [
     id: "493",
     name: "Hauwee #493",
     type: "Community Collab",
-    img: assetUrl('/assets/NFTs/Community_Collab/493.png'),
+    img: "/src/assets/NFTs/Community_Collab/493.png",
     traitLabel: "Clusterfuck",
     traitType: "Collab Edition",
     desc: "A special edition built side-by-side with our dedicated Web3 ecosystem partners."
@@ -66,7 +65,7 @@ const nftData = [
     id: "416",
     name: "Hauwee #416",
     type: "Community Collab",
-    img: assetUrl('/assets/NFTs/Community_Collab/416.png'),
+    img: "/src/assets/NFTs/Community_Collab/416.png",
     traitLabel: "TouchGrass & WGA",
     traitType: "Collab Edition",
     desc: "A collaborative community takeover piece built in solidarity with the core HAU family."
@@ -75,7 +74,7 @@ const nftData = [
     id: "458",
     name: "Hauwee #458",
     type: "Community Collab",
-    img: assetUrl('/assets/NFTs/Community_Collab/458.png'),
+    img: "/src/assets/NFTs/Community_Collab/458.png",
     traitLabel: "BASC & Pengwine",
     traitType: "Collab Edition",
     desc: "Bridging the gaps and highlighting major collaborative initiatives on Solana."
@@ -85,21 +84,21 @@ const nftData = [
     id: "33",
     name: "Hauwee #33",
     type: "Common",
-    img: assetUrl('/assets/NFTs/Common/33.png'),
+    img: "/src/assets/NFTs/Common/33.png",
     desc: "A classic representation of the hand-drawn Sean base styles that laid the ecosystem foundations."
   },
   {
     id: "419",
     name: "Hauwee #419",
     type: "Common",
-    img: assetUrl('/assets/NFTs/Common/419.png'),
+    img: "/src/assets/NFTs/Common/419.png",
     desc: "Featuring standard, well-balanced daily lines and colors canonical to the PFP collection."
   },
   {
     id: "445",
     name: "Hauwee #445",
     type: "Common",
-    img: assetUrl('/assets/NFTs/Common/445.png'),
+    img: "/src/assets/NFTs/Common/445.png",
 
   }
 ];

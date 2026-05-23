@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { Play, ArrowRight, TrendingUp, BookOpen, Rocket, Users } from 'lucide-react';
 import Button from '../components/Button';
 import { useNFTStats } from '../hooks/useNFTStats';
-import { assetUrl } from '../utils/assetUrl';
 
 // Custom Scroll Reveal Component
 const RevealOnScroll = ({ children }) => {
@@ -166,8 +165,8 @@ const Home = () => {
         {/* Background Loop Video */}
         <div className="absolute inset-0 z-0 bg-black overflow-hidden flex items-center justify-center">
           <video autoPlay loop muted playsInline preload="metadata" className="absolute inset-0 w-full h-full object-cover z-0 opacity-45">
-            <source src={assetUrl('/assets/Hero_video/Webpage hero bgvideo.webm')} type="video/webm" />
-            <source src={assetUrl('/assets/Hero_video/Webpage hero bgvideo.mp4')} type="video/mp4" />
+            <source src="/src/assets/Hero_video/Webpage hero bgvideo.webm" type="video/webm" />
+            <source src="/src/assets/Hero_video/Webpage hero bgvideo.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
 
@@ -411,7 +410,7 @@ const Home = () => {
                 preload="metadata"
                 className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
               >
-                <source src={assetUrl('/assets/Game/Webpage game  bgvideo.mp4')} type="video/mp4" />
+                <source src="/src/assets/Game/Webpage game  bgvideo.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
               <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-10">
@@ -450,28 +449,28 @@ const Home = () => {
             </div>
             <div className="flex space-x-16 animate-marquee whitespace-nowrap opacity-80 relative z-10 items-center">
               {[
-                { name: 'CFC', logo: assetUrl('/assets/partners/cfc.png') },
-                { name: 'RANDY AI', logo: assetUrl('/assets/partners/randyai.png') },
-                { name: 'LFGO', logo: assetUrl('/assets/partners/lfgo.png') },
-                { name: 'CLUSTERFUCK', logo: assetUrl('/assets/partners/clusterfuck.png') },
-                { name: 'Sir Nasty', logo: assetUrl('/assets/partners/sirnasty.png') },
-                { name: 'WGA', logo: assetUrl('/assets/partners/wga.png') },
-                { name: 'Meta Muses', logo: assetUrl('/assets/partners/metamuses.png') },
-                { name: 'GROKLET', logo: assetUrl('/assets/partners/groklet.png') },
-                { name: 'MARS', logo: assetUrl('/assets/partners/mars.png') },
-                { name: "WEB3 WOMEN'S DAY", logo: assetUrl('/assets/partners/w3wd.png') },
+                { name: 'CFC', logo: '/src/assets/partners/cfc.png' },
+                { name: 'RANDY AI', logo: '/src/assets/partners/randyai.png' },
+                { name: 'LFGO', logo: '/src/assets/partners/lfgo.png' },
+                { name: 'CLUSTERFUCK', logo: '/src/assets/partners/clusterfuck.png' },
+                { name: 'Sir Nasty', logo: '/src/assets/partners/sirnasty.png' },
+                { name: 'WGA', logo: '/src/assets/partners/wga.png' },
+                { name: 'Meta Muses', logo: '/src/assets/partners/metamuses.png' },
+                { name: 'GROKLET', logo: '/src/assets/partners/groklet.png' },
+                { name: 'MARS', logo: '/src/assets/partners/mars.png' },
+                { name: "WEB3 WOMEN'S DAY", logo: '/src/assets/partners/w3wd.png' },
                 { name: 'More to come 🙂', logo: null },
                 // Duplicated to create seamless loop
-                { name: 'CFC', logo: assetUrl('/assets/partners/cfc.png') },
-                { name: 'RANDY AI', logo: assetUrl('/assets/partners/randyai.png') },
-                { name: 'LFGO', logo: assetUrl('/assets/partners/lfgo.png') },
-                { name: 'CLUSTERFUCK', logo: assetUrl('/assets/partners/clusterfuck.png') },
-                { name: 'Sir Nasty', logo: assetUrl('/assets/partners/sirnasty.png') },
-                { name: 'WGA', logo: assetUrl('/assets/partners/wga.png') },
-                { name: 'Meta Muses', logo: assetUrl('/assets/partners/metamuses.png') },
-                { name: 'GROKLET', logo: assetUrl('/assets/partners/groklet.png') },
-                { name: 'MARS', logo: assetUrl('/assets/partners/mars.png') },
-                { name: "WEB3 WOMEN'S DAY", logo: assetUrl('/assets/partners/w3wd.png') },
+                { name: 'CFC', logo: '/src/assets/partners/cfc.png' },
+                { name: 'RANDY AI', logo: '/src/assets/partners/randyai.png' },
+                { name: 'LFGO', logo: '/src/assets/partners/lfgo.png' },
+                { name: 'CLUSTERFUCK', logo: '/src/assets/partners/clusterfuck.png' },
+                { name: 'Sir Nasty', logo: '/src/assets/partners/sirnasty.png' },
+                { name: 'WGA', logo: '/src/assets/partners/wga.png' },
+                { name: 'Meta Muses', logo: '/src/assets/partners/metamuses.png' },
+                { name: 'GROKLET', logo: '/src/assets/partners/groklet.png' },
+                { name: 'MARS', logo: '/src/assets/partners/mars.png' },
+                { name: "WEB3 WOMEN'S DAY", logo: '/src/assets/partners/w3wd.png' },
                 { name: 'More to come 🙂', logo: null }
               ].map((partner, i) => {
                 // Dynamic retro color cycle matching the brand scheme

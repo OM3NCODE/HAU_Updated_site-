@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Copy, Check } from 'lucide-react';
-import { assetUrl } from '../utils/assetUrl';
 
 const Footer = () => {
   const [copiedHau, setCopiedHau] = useState(false);
@@ -26,13 +25,13 @@ const Footer = () => {
             <div className="flex items-center gap-2 sm:gap-2.5 self-start group/logo">
               <div className="rounded-full border-2 border-brand-purple overflow-hidden flex items-center justify-center bg-nft-orange shadow-lg w-9 h-9 sm:w-10 sm:h-10 flex-shrink-0 transition-transform duration-300 group-hover/logo:scale-105">
                 <img
-                  src={assetUrl('/assets/hauwee_unicorn_avatar.png')}
+                  src="/src/assets/hauwee_unicorn_avatar.png"
                   alt="Unicorn Icon"
                   className="w-full h-full object-cover scale-105"
                 />
               </div>
               <img
-                src={assetUrl('/assets/HAU%20Logo.png')}
+                src="/src/assets/HAU%20Logo.png"
                 alt="HIGH AS UNICORN"
                 className="w-full max-w-[170px] sm:max-w-[200px] md:max-w-[240px] h-auto object-contain transition-transform duration-300 group-hover/logo:scale-105"
               />
