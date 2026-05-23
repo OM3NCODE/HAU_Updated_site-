@@ -1,0 +1,429 @@
+﻿HIGHASUNICORN.MEME
+Website Design Specification
+For Adhish  •  From Chris  •  May 2026
+DOCUMENT PURPOSE
+This spec defines the structure, user journey, visual identity, and page-by-page content for the new highasunicorn.meme website. It is the builder’s blueprint — everything Adhish needs to construct the site without guessing. The interactive wireframe (HAU_Website_Wireframe.jsx) is the companion file showing live layout and navigation.
+Contents
+Project Overview & Goals
+User Journey & Conversion Flow
+Site Architecture (6 Pages)
+Visual Identity (Colors, Typography, Tone)
+Page-by-Page Specification
+Global Components (Nav, Footer, CTAs)
+Technical Notes & Assets Needed
+Content Inventory (Copy Adhish Needs)
+1. PROJECT OVERVIEW & GOALS
+What Is This Site?
+highasunicorn.meme is the main website for High As Unicorn (HAU), a dual-chain Web3 community project with two meme tokens ($HAU and $UBP) and one NFT collection (Hauwee). The site replaces whatever existed before and becomes the single source of truth for the project.
+What It Is NOT
+NOT a DApp — no wallet connections, no on-chain transactions on the site itself
+NOT a marketplace — minting links to LaunchMyNFT, trading links to Magic Eden
+NOT where the game lives — Hauwee’s Lava Run is on Discord/Telegram only
+NOT shithappens.com — that’s a separate landing page (redirects to DexScreener)
+Primary Goals (Ranked)
+#
+GOAL
+HOW THE SITE ACHIEVES IT
+1
+Mint a Hauwee NFT
+Shill math on home page, dedicated NFT page with mint progress, "Mint" button in nav on every page, LaunchMyNFT link
+2
+Join the Discord
+Secondary CTA on every page, game page drives Discord sign-ups, "Join" button in hero
+3
+Buy $HAU or $UBP
+Token page with both CAs + DexScreener embeds, CAs in footer on every page, shithappens.com link
+4
+Play the game
+Game page explains Lava Run, links to Discord/TG, upsells back to NFTs for multipliers
+2. USER JOURNEY & CONVERSION FLOW
+The Core Loop
+Every page on the site feeds one loop: visitor discovers HAU → shill math hooks them → they mint a Hauwee → they join Discord → they play the game → they earn $UBP → they buy more $HAU → NFT value rises → more people mint. The site exists to start this loop.
+Journey Map: New Visitor (Degen from X)
+Lands on home page from X link or shithappens.com redirect
+Sees hero: "Two Tokens. One NFT. Two Chains." — understands scope instantly
+Scrolls to ecosystem cards: $HAU, $UBP, Hauwee — clicks whichever interests them
+Hits shill math banner: "Mint at 0.22, floor at 0.4" — the hook
+Clicks "Mint a Hauwee" → NFT page → sees progress bar (906/1,111) → mints on LaunchMyNFT
+Returns, sees "Join Discord for game nights" → joins Discord
+Discovers Hauwee’s Lava Run in Discord → plays → earns $UBP
+Visits token page to buy more $HAU and $UBP on Raydium/DexScreener
+Becomes community member → attends Friday Spaces → tells friends
+Journey Map: Existing Holder (Checking In)
+Lands on home page — sees updated stats (minted count, floor price)
+Checks token page for live DexScreener charts
+Visits game page for leaderboard / game night schedule
+Shares site link with friends as a shill tool
+KEY DESIGN PRINCIPLE
+Every page must have at least TWO visible CTAs at all times: (1) Mint a Hauwee (primary, in nav), and (2) Join Discord (secondary). The token CAs must be visible in the footer without scrolling on desktop. On mobile, a sticky "Mint" button at the bottom of the screen.
+3. SITE ARCHITECTURE
+Page Structure
+PAGE
+PURPOSE
+PRIMARY CTA
+URL
+Home
+Ecosystem overview, hook visitors, start conversion
+Mint a Hauwee
+/
+NFTs
+Hauwee collection, mint progress, holder benefits
+Mint on LaunchMyNFT
+/nfts
+Tokens
+$HAU + $UBP side by side, CAs, charts
+Buy on DexScreener
+/tokens
+Game
+Hauwee’s Lava Run info, links to Discord/TG
+Join Discord to Play
+/game
+Team
+Real people, real faces, Hauwee PFPs
+Join Friday Spaces
+/team
+Partners
+17+ collabs, three pillars, credibility
+Join the Community
+/partners
+4. VISUAL IDENTITY
+Brand Colors
+The palette is anchored by HAU purple with supporting accent colors. Each token has its own color identity to distinguish them at a glance.
+Primary Palette
+Deep Purple
+#5B21B6
+HAU Purple
+#7C3AED
+Light Purple
+#EDE9FE
+Dark Text
+#1F2937
+Token Colors
+$HAU Purple
+#7C3AED
+$UBP Teal
+#0D9488
+NFT Orange
+#EA580C
+Gold Accent
+#B45309
+Semantic Colors
+Success/Green
+#059669
+Info/Blue
+#2563EB
+Warning/Red
+#DC2626
+Muted Gray
+#6B7280
+Background Tints (for cards and sections)
+$HAU Tint
+#EDE9FE
+$UBP Tint
+#F0FDFA
+NFT Tint
+#FFF7ED
+Neutral Tint
+#F3F4F6
+Typography
+Display / Headlines: Use a bold, characterful font. Suggestions: Satoshi, General Sans, or Cabinet Grotesk (all free on Fontshare). NOT Inter, Roboto, or Arial. The font should feel degen-friendly but readable.
+Body Text: Pair with a clean sans-serif. DM Sans, Plus Jakarta Sans, or the same display font at lighter weights.
+Monospace (for CAs): JetBrains Mono or Fira Code — contract addresses must be scannable and copy-friendly.
+Size Scale: Hero headline: 48–56px. Section titles: 28–32px. Body: 16–18px. Captions: 12–14px.
+Tone & Vibe
+THE FEEL
+Degen-but-wholesome. Playful, not corporate. Confident, not try-hard. The site should feel like a friend who’s good at crypto inviting you in — not a pitch deck from a startup. Think: Pudgy Penguins energy meets community-first messaging.
+DO: Use memes, humor, the Hauwee character, casual language, real numbers
+DO: Show the shill math prominently — it’s the hook
+DO: Use “Hau ya doing?” as the greeting throughout
+DON’T: Corporate jargon, stock photos, stiff language
+DON’T: Promise returns, use rocket emojis, or say “to the moon”
+DON’T: Make it look like every other Solana meme site (gradient purple on black)
+The Hauwee character should appear throughout the site in different poses/traits. Sean’s hand-drawn style IS the brand — don’t polish it into something generic. The charm is in the goofy, hand-drawn, derpy energy.
+5. PAGE-BY-PAGE SPECIFICATION
+HOME PAGE  —  /
+The home page is the storefront. A new visitor should understand what HAU is within 5 seconds, hit the shill math hook within 10, and be clicking “Mint” within 30.
+ORDER
+SECTION
+CONTENT
+CTA / ACTION
+1
+Navigation Bar
+Logo + site name left, page links center, “Mint a Hauwee” button right (primary, always visible)
+Mint a Hauwee → /nfts
+2
+Hero Section
+Headline: "We Care. We Listen. We Vibe."
+Subhead: "Two tokens, one NFT, two chains"
+Hauwee hero art (animated or rotating NFTs)
+shithappens.com mention
+Primary: Mint a Hauwee
+Secondary: Join Discord
+3
+Ecosystem Cards
+Three side-by-side cards: $HAU (purple), $UBP (teal), Hauwee NFT (orange). Each with name, one-liner, key stat.
+Each card links to its page
+4
+Shill Math Banner
+"Mint at 0.22 SOL → Floor at 0.4 SOL"
+Calculate current upside %. Bold. Orange accent.
+Mint Now → LaunchMyNFT
+5
+Live Stats Bar
+77+ Spaces • 906 Minted • 17+ Partners • 2+ Years • 4 Countries
+None (social proof)
+6
+"What Gets You HIGH?"
+Community intro. Three pillars: Education, Opportunity, Community. Brief, warm.
+Learn More
+7
+Game Teaser
+Hauwee’s Lava Run screenshot, "Play. Earn $UBP. Compete."
+Learn More → /game
+8
+Partner Logos
+Scrolling marquee: CFC, LFGO, WGA, SolGoths, etc.
+None (credibility)
+9
+Footer
+Three columns: Site links + socials | Both CAs (copyable) | Friday Spaces time + shithappens.com
+Social links
+NFT PAGE  —  /nfts
+This is the conversion page. The #1 goal of the entire site lives here. Every element pushes toward minting.
+ORDER
+SECTION
+CONTENT
+CTA / ACTION
+1
+Page Header
+"The Hauwee Collection" — 1,111 hand-drawn by Sean. 150 unique traits.
+None
+2
+Mint Progress Bar
+906/1,111 minted. Visual progress bar (81.6%). Stats: minted, remaining, mint price, floor price.
+None (urgency)
+3
+Mint CTA Block
+"Mint is CHEAPER than floor. Do the math."
+0.22 SOL vs 0.4 SOL = 82% upside.
+Mint on LaunchMyNFT
+Browse on Magic Eden
+4
+NFT Gallery
+Grid of Hauwees. Filterable by trait (Lava Lamp, Unicorn Fart, Space Helmet, etc).
+Click → Magic Eden listing
+5
+Holder Benefits
+6-card grid: trait prizes, airdrops, game multipliers, Discord roles, IRL events, governance
+Mint → LaunchMyNFT
+6
+"Fresh Mints" Feed
+Show recent mints (this week: 7 new!). Social proof of activity.
+Mint yours
+CRITICAL: MINT PRICE vs FLOOR
+The shill math (0.22 SOL mint vs 0.4 SOL floor) must be the most prominent element on this page. This is the single strongest conversion argument in the entire project. Make it impossible to miss. Bold, large, with the upside percentage calculated live if possible.
+TOKENS PAGE  —  /tokens
+Side-by-side presentation of both tokens. Each has its own personality but they’re clearly part of one ecosystem.
+ORDER
+SECTION
+CONTENT
+CTA / ACTION
+1
+Page Header
+"Two Tokens. One Ecosystem."
+$HAU is community. $UBP is degen.
+None
+2
+$HAU Card (Left)
+Full name, CA (copyable), supply, chain info (Solana + BTC Rune #1934), role: community token, team comp
+Buy $HAU → DexScreener
+shithappens.com mention
+3
+$UBP Card (Right)
+Full name, CA (copyable), origin (CTO from pump.fun), role: game currency, BAST rewards, LP burned
+Buy $UBP → DexScreener
+4
+Flywheel Diagram
+Visual: Hold Hauwee → Get airdrops → Play game → Earn UBP → Community grows → Value rises → repeat
+None (education)
+5
+DexScreener Embeds
+Live charts for both tokens side by side. Real-time price, volume, holders.
+Trade buttons
+Contract Addresses: Both CAs must be displayed in monospace, full-length, with a one-click copy button. Degens copy-paste CAs constantly — make it frictionless.
+GAME PAGE  —  /game
+Informational only — the game itself lives on Discord and Telegram. This page explains, hypes, and funnels people to those platforms.
+ORDER
+SECTION
+CONTENT
+CTA / ACTION
+1
+Page Header
+"Hauwee’s Lava Run" — Play. Earn $UBP. Compete.
+None
+2
+Game Hero
+Screenshot or GIF of gameplay. How it works in 5 steps.
+None (education)
+3
+Play Buttons
+Two large cards side by side: Discord (purple) + Telegram (blue). Each with platform icon + description.
+Join Discord → invite link
+Open Telegram → bot link
+4
+Leaderboard
+Top 10 players, scores, $UBP earned. Updated weekly or live if API available.
+None (competition)
+5
+NFT Upsell
+"Hauwee holders earn bonus $UBP." Mint price vs floor math again.
+Mint a Hauwee → /nfts
+6
+Game Night Schedule
+Next game night date/time. 200 UBP airdrop per session.
+Set reminder / Join Discord
+TEAM PAGE  —  /team
+ORDER
+SECTION
+CONTENT
+CTA / ACTION
+1
+Page Header
+"Real People. Real Faces." 12+ members, 4 countries. No anonymous devs.
+None
+2
+Core Team Grid
+4-column grid. Each member: Hauwee PFP, name, role, country flag. Clickable for bio.
+None
+3
+SHIELD Team (Nigeria)
+Separate row for the 6 Nigerian team members. Same format.
+None
+4
+Community CTA
+"Hau ya doing?" Friday Spaces info. Social links.
+Join Friday Spaces
+Discord + Telegram
+PFPs: Every team member uses a Hauwee NFT they hold as their profile picture. This is both brand-consistent and proves team members hold the NFTs. All team members are submitting their PFPs and screen names to the marketing chat.
+PARTNERS PAGE  —  /partners
+ORDER
+SECTION
+CONTENT
+CTA / ACTION
+1
+Page Header
+"17+ Partners & Growing." We collaborate, not compete.
+None
+2
+Featured Partners
+Grid of 6–9 partner cards with logo, name, one-line description, link
+Visit partner
+3
+Three Pillars
+Education, Opportunity, Community — with real examples from partnerships
+None (brand story)
+4
+Partnership CTA
+"Want to partner with HAU?" Contact info or DM link.
+DM @highasunicorn
+6. GLOBAL COMPONENTS
+Navigation Bar (All Pages)
+Left: Logo (Hauwee icon) + "HIGH AS UNICORN" text
+Center: Page links — Home, NFTs, Tokens, Game, Team, Partners
+Right: "MINT A HAUWEE" primary button (always visible, orange/purple)
+Mobile: Hamburger menu, sticky "Mint" button at bottom of screen
+On scroll: Nav becomes sticky with slight background blur/opacity
+Footer (All Pages)
+Three columns: (1) Site name + links + socials, (2) Both CAs in monospace with copy buttons, (3) Friday Spaces time + highasunicorn.meme + shithappens.com
+Must include: @highasunicorn Twitter, Discord invite, Telegram link
+CAs must be full-length and copyable with one click
+Tagline: "Hau ya doing?" or "We Care. We Listen. We Vibe."
+CTA Button Hierarchy
+Primary (solid purple or orange): Mint a Hauwee, Buy tokens
+Secondary (outlined purple): Join Discord, Learn More
+Tertiary (text link): View on Magic Eden, DexScreener
+Hover: Subtle scale + shadow. No dramatic color changes.
+7. TECHNICAL NOTES & ASSETS NEEDED
+Tech Stack (Recommendation)
+Adhish’s preference is final, but for a multi-page site with some dynamic content:
+React (Next.js or Vite) for routing and component reuse
+Tailwind CSS for rapid styling with the custom color palette
+Hosted on Vercel or Netlify (free tier is fine for this traffic level)
+Domain: highasunicorn.meme (already owned)
+No backend needed — all content is static or embedded (DexScreener iframes)
+Assets Adhish Needs
+ASSET
+SOURCE
+STATUS
+Hauwee hero art (high-res, transparent bg)
+Sean / Marketing folder
+Team submitting PFPs
+Team member PFPs (Hauwee NFTs)
+Each team member
+Due Fri 5/23
+Game screenshots / GIF
+Adhish (from Discord game)
+Can self-source
+Partner logos (at least 6–9)
+Chris / Partner contacts
+Needed
+$HAU logo for token page
+Sean
+Existing
+$UBP logo for token page
+Sean
+Existing (pump.fun art)
+Hauwee collection sample grid (8–12 images)
+Magic Eden / Sean
+Available on-chain
+DexScreener embed URLs for both tokens
+DexScreener (free)
+Self-service
+LaunchMyNFT mint link
+launchmynft.io/sol/20352
+Active
+Magic Eden collection link
+Magic Eden HAUWEE
+Active
+Discord invite link (permanent)
+Sean / Chris
+Needed
+Telegram bot/group link
+Chris
+Needed
+shithappens.com explanation text
+Chris
+See this doc
+8. CONTENT INVENTORY
+Copy Adhish Can Use As-Is
+These are ready-to-paste text blocks. Adhish should treat them as first drafts — Chris can finalize tone.
+Hero Headline Options
+"We Care. We Listen. We Vibe. 🦄" (brand values)
+"Two Tokens. One NFT. Two Chains. Zero Rugs." (ecosystem)
+"What Gets You HIGH?" (community-first)
+"Hau Ya Doing?" (greeting-as-headline)
+Subheadline
+The Web3 community that survived 2+ years, 77+ consecutive Spaces, and built something real. Education. Opportunity. Community.
+Shill Math Block
+Mint a Hauwee at 0.22 SOL ($18.70). Floor is 0.4 SOL ($34). Secondaries sell at 0.3–0.45 SOL. That’s 36–105% upside from mint. 205 remaining. Play Hauwee’s Lava Run, earn $UBP. Hold a Hauwee, get airdrops. Do the math.
+$HAU Description
+The original community token. Solana + Bitcoin Rune #1934. 1 billion supply. Team gets paid in $HAU. Holders are family. 77+ weeks of Friday Spaces. Survived the bear market. Still building.
+$UBP Description
+Unicorn Butt Plug. Yes, you read that right. The degen meme token in the HAU ecosystem. Earn it by playing Hauwee’s Lava Run. Earn it by shilling through BAST. LP burned — nobody can rug. The name alone stops people scrolling.
+Hauwee NFT Description
+1,111 hand-drawn NFTs by Sean. 150 unique trait combinations. Upside-down ice cream cone horn. Purple hoodie. Gold grillz. $HAU chain bling. Derpy wide-eyed expression. Each one is a ticket into the HAU ecosystem: airdrops, game multipliers, trait prizes, IRL events, and governance.
+Game Description
+Hauwee’s Lava Run. A side-scrolling adventure on Discord and Telegram. Play, dodge lava, earn $UBP tokens. Hauwee NFT holders get multipliers on their rewards. Game nights every week with 200 UBP airdrops to participants.
+Contract Addresses
+$HAU: 5pGEypcitpXrwoZryQcDjHMzFyBhedLR4F4YyjmskaXt
+$UBP: Da1srbCJnuYaPibt4Hdi9Q9bNbHY7eFAT3VKChzbpump
+Bitcoin: Rune #1934
+NFT Mint: launchmynft.io/sol/20352
+Landing Page: shithappens.com → DexScreener $HAU (friend loaning it, may switch to $UBP)
+REMINDER: BRAND RULES
+Spelling: HAUWEE — always. Never Hauwie, Howie, or Howee.
+PFP style: Full smile (gold teeth showing). Not the rotten tooth variant.
+Soul Spin Sunday: Belongs to WGA, not HAU. Do not attribute.
+Never: Promise returns, mention Vegas/MemeCon (cancelled), use rocket emojis.
+Always: Include both CAs. Show real numbers. Credit Sean for the art.
+Hau ya doing? Let’s build this. 🦄

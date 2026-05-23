@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,500,700,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap');
+
+@font-face {
+  font-family: "Sugar Bomb";
+  src: url("./assets/SugarBomb.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sugar Bomb";
+  src: url("./assets/SugarBomb.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SugarBomb";
+  src: url("./assets/SugarBomb.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SugarBomb";
+  src: url("./assets/SugarBomb.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #1d0b3a !important;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(124, 58, 237, 0.25) 0px, transparent 55%),
+      radial-gradient(at 100% 30%, rgba(255, 0, 252, 0.12) 0px, transparent 50%),
+      radial-gradient(at 30% 70%, rgba(47, 255, 55, 0.08) 0px, transparent 45%),
+      radial-gradient(at 80% 100%, rgba(242, 169, 0, 0.09) 0px, transparent 50%) !important;
+    background-attachment: fixed !important;
+    color: #ffffff;
+    font-family: 'Russo One', 'DM Sans', sans-serif;
+  }
+
+  #root {
+    background-color: #1d0b3a !important;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Sugar Bomb', 'SugarBomb', 'Luckiest Guy', 'Cabinet Grotesk', sans-serif;
+    font-weight: 700;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  }
+  
+  .font-display {
+    font-family: 'Sugar Bomb', 'SugarBomb', 'Luckiest Guy', 'Cabinet Grotesk', sans-serif !important;
+  }
+  
+  .font-body {
+    font-family: 'Russo One', 'DM Sans', sans-serif !important;
+  }
+
+  .bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+
+  .bg-brand-deep {
+    background-color: #1d0b3a !important;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background-color: #1d0b3a;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #7C3AED;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #EDE9FE;
+}
