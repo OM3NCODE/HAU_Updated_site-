@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Play, ArrowRight, TrendingUp, BookOpen, Rocket, Users } from 'lucide-react';
+import { Play, ArrowRight, TrendingUp, BookOpen, Rocket, Users, Copy, Check, ChevronDown } from 'lucide-react';
 import Button from '../components/Button';
 import { useNFTStats } from '../hooks/useNFTStats';
 
@@ -49,6 +49,20 @@ const Home = () => {
   const [hasScrolled, setHasScrolled] = useState(false);
   const [isTitleRevealed, setIsTitleRevealed] = useState(false);
   const { minted, mintPrice, floorPrice, upside, loading } = useNFTStats();
+
+  const [copiedHau, setCopiedHau] = useState(false);
+  const [copiedUbp, setCopiedUbp] = useState(false);
+
+  const hauCA = "5pGEypcitpXrwoZryQcDjHMzFyBhedLR4F4YyjmskaXt";
+  const ubpCA = "9Aj8gNVqU6do2BaShZpEZiDrp2wf7usRuupFpkwh8ray";
+
+  const copyToClipboard = (e, text, setter) => {
+    e.preventDefault();
+    e.stopPropagation();
+    navigator.clipboard.writeText(text);
+    setter(true);
+    setTimeout(() => setter(false), 2000);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -215,9 +229,34 @@ const Home = () => {
               <Button href="https://launchmynft.io/sol/20352" variant="accent" className="w-full sm:w-auto text-lg sm:text-xl px-10 sm:px-12 py-4 sm:py-5 bg-emerald-500 hover:bg-emerald-600 border-2 border-emerald-400 text-black shadow-2xl shadow-emerald-500/30 hover:scale-105 transition-transform duration-300">
                 Mint a Hauwee
               </Button>
-              <Button href="https://discord.gg/6Jxar3SCFK" variant="secondary" className="w-full sm:w-auto text-lg sm:text-xl px-10 sm:px-12 py-4 sm:py-5 border-2 border-white/20 hover:bg-white/10 hover:scale-105 transition-transform duration-300">
-                Join Discord
+              <Button href="https://twitter.com/highasunicorn" variant="secondary" className="w-full sm:w-auto text-lg sm:text-xl px-10 sm:px-12 py-4 sm:py-5 border-2 border-white/20 hover:bg-white/10 hover:scale-105 transition-transform duration-300">
+                Follow us on X
               </Button>
+            </div>
+
+            {/* Also Follow Us Section */}
+            <div className={`mt-6 sm:mt-8 flex flex-col items-center gap-3 transition-all duration-1000 delay-[600ms] transform lg:transition-none lg:delay-0 lg:opacity-100 lg:translate-y-0 lg:scale-100 lg:pointer-events-auto ${isTitleRevealed ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-95'}`}>
+              <span className="text-tint-neutral/60 text-sm font-mono uppercase tracking-wider">Also follow us here</span>
+              <div className="flex gap-4">
+                <a
+                  href="https://discord.gg/6Jxar3SCFK"
+                  className="flex items-center justify-center w-12 h-12 rounded-full bg-black/40 border border-brand-purple/20 text-tint-neutral hover:text-[#2fff37] hover:border-[#2fff37]/60 hover:bg-black/60 shadow-md hover:scale-110 transition-all duration-300 hover:shadow-[0_0_15px_rgba(47,255,55,0.4)]"
+                  aria-label="Discord"
+                >
+                  <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">
+                    <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.873-.894.077.077 0 0 1-.008-.128c.126-.093.252-.19.372-.287a.075.075 0 0 1 .077-.011c3.92 1.793 8.18 1.793 12.061 0a.073.073 0 0 1 .078.009c.12.099.246.195.373.289a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.156-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.156 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.156-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.156 2.418z" />
+                  </svg>
+                </a>
+                <a
+                  href="https://t.me/HighAsUnicorns"
+                  className="flex items-center justify-center w-12 h-12 rounded-full bg-black/40 border border-brand-purple/20 text-tint-neutral hover:text-[#f2a900] hover:border-[#f2a900]/60 hover:bg-black/60 shadow-md hover:scale-110 transition-all duration-300 hover:shadow-[0_0_15px_rgba(242,169,0,0.4)]"
+                  aria-label="Telegram"
+                >
+                  <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-1-.65-.35-1 .22-1.62.15-.15 2.7-2.46 2.75-2.67.01-.03.01-.15-.06-.21a.28.28 0 0 0-.22-.04c-.1.02-1.62 1.03-4.58 3.03-.43.3-.82.45-1.17.44-.39-.01-1.15-.22-1.71-.4-.69-.23-1.24-.35-1.19-.74.03-.2.28-.4.76-.6 2.97-1.29 4.96-2.15 5.97-2.58 2.88-1.21 3.48-1.42 3.87-1.43.09 0 .28.02.4.12.1.09.13.21.14.3.01.06.01.17 0 .23z" />
+                  </svg>
+                </a>
+              </div>
             </div>
 
             <p className={`text-xs sm:text-sm text-tint-neutral/60 font-mono transition-all duration-1000 delay-[700ms] transform lg:transition-none lg:delay-0 lg:opacity-100 lg:translate-y-0 lg:scale-100 lg:pointer-events-auto lg:mt-4 ${isTitleRevealed
@@ -228,6 +267,12 @@ const Home = () => {
             </p>
           </div>
         </div>
+
+        {/* Scroll Down Indicator (Mobile Only) */}
+        <div className={`absolute bottom-6 left-0 right-0 w-full flex md:hidden flex-col items-center justify-center gap-1 animate-bounce z-20 transition-opacity duration-1000 delay-[800ms] px-4 text-center ${isTitleRevealed ? 'opacity-100' : 'opacity-0'}`}>
+          <span className="text-[#2fff37] text-xs sm:text-sm font-display uppercase tracking-[0.2em]" style={{ textShadow: '0 0 10px rgba(47,255,55,0.4)' }}>Scroll to check out more</span>
+          <ChevronDown className="text-[#2fff37] w-5 h-5 sm:w-6 sm:h-6" style={{ filter: 'drop-shadow(0 0 5px rgba(47,255,55,0.4))' }} />
+        </div>
       </section>
 
       {/* Rest of the Page Content (Constrained to max-w-7xl) */}
@@ -237,30 +282,49 @@ const Home = () => {
         <RevealOnScroll>
           <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-            {/* $HAU Card (Green) */}
+            {/* Tokens Card ($HAU & $UBP) */}
             <Link to="/tokens" className="group relative overflow-hidden rounded-3xl p-8 backdrop-blur-md bg-black/40 border-2 border-[#2fff37]/20 hover:border-[#2fff37]/70 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_-10px_rgba(47,255,55,0.25)] flex flex-col justify-between min-h-[300px]">
               <div className="absolute -top-24 -right-24 w-48 h-48 rounded-full bg-[#2fff37]/10 blur-[60px] pointer-events-none transition-all duration-500 group-hover:bg-[#2fff37]/20"></div>
               <div>
                 <h3 className="text-[#2fff37] font-display text-3xl mb-3 flex items-center justify-between tracking-wide" style={{ textShadow: '0 0 15px rgba(47,255,55,0.4)' }}>
-                  $HAU <ArrowRight className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1" />
+                  Tokens <ArrowRight className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1" />
                 </h3>
-                <p className="text-xl font-body font-bold mb-4 text-white">The Community Token</p>
-                <p className="text-tint-neutral/70 font-body text-sm leading-relaxed">Solana + Bitcoin Rune #1934. Holders are family. Survived the bear market and still thriving.</p>
+                <p className="text-xl font-body font-bold mb-4 text-white">$HAU and $UBP</p>
+                <p className="text-tint-neutral/70 font-body text-sm leading-relaxed mb-4">The Community Token ($HAU) and the Game Token ($UBP). Together they power the ecosystem.</p>
               </div>
-              <div className="mt-6 text-[#2fff37] font-mono text-xs tracking-wider uppercase opacity-75">Learn More &rarr;</div>
+              <div className="mt-auto space-y-3">
+                {/* HAU CA */}
+                <button
+                  onClick={(e) => copyToClipboard(e, hauCA, setCopiedHau)}
+                  className="w-full flex items-center justify-between bg-black/40 p-3 rounded-xl border border-[#2fff37]/20 hover:border-[#2fff37] transition-colors"
+                >
+                  <span className="font-mono text-xs truncate mr-2 text-tint-neutral">HAU: {hauCA}</span>
+                  {copiedHau ? <Check size={16} className="text-semantic-success flex-shrink-0" /> : <Copy size={16} className="text-[#2fff37] flex-shrink-0" />}
+                </button>
+
+                {/* UBP CA */}
+                <button
+                  onClick={(e) => copyToClipboard(e, ubpCA, setCopiedUbp)}
+                  className="w-full flex items-center justify-between bg-black/40 p-3 rounded-xl border border-[#ff00fc]/20 hover:border-[#ff00fc] transition-colors"
+                >
+                  <span className="font-mono text-xs truncate mr-2 text-tint-neutral">UBP: {ubpCA}</span>
+                  {copiedUbp ? <Check size={16} className="text-semantic-success flex-shrink-0" /> : <Copy size={16} className="text-[#ff00fc] flex-shrink-0" />}
+                </button>
+                <div className="mt-4 text-[#2fff37] font-mono text-xs tracking-wider uppercase opacity-75">Learn More &rarr;</div>
+              </div>
             </Link>
 
-            {/* $UBP Card (Pink) */}
-            <Link to="/tokens" className="group relative overflow-hidden rounded-3xl p-8 backdrop-blur-md bg-black/40 border-2 border-[#ff00fc]/20 hover:border-[#ff00fc]/70 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_-10px_rgba(255,0,252,0.25)] flex flex-col justify-between min-h-[300px]">
+            {/* Game Card */}
+            <Link to="/game" className="group relative overflow-hidden rounded-3xl p-8 backdrop-blur-md bg-black/40 border-2 border-[#ff00fc]/20 hover:border-[#ff00fc]/70 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_-10px_rgba(255,0,252,0.25)] flex flex-col justify-between min-h-[300px]">
               <div className="absolute -top-24 -right-24 w-48 h-48 rounded-full bg-[#ff00fc]/10 blur-[60px] pointer-events-none transition-all duration-500 group-hover:bg-[#ff00fc]/20"></div>
               <div>
                 <h3 className="text-[#ff00fc] font-display text-3xl mb-3 flex items-center justify-between tracking-wide" style={{ textShadow: '0 0 15px rgba(255,0,252,0.4)' }}>
-                  $UBP <ArrowRight className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1" />
+                  Game <ArrowRight className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1" />
                 </h3>
-                <p className="text-xl font-body font-bold mb-4 text-white">The Game token</p>
-                <p className="text-tint-neutral/70 font-body text-sm leading-relaxed">Unicorn Butt Plug. Play to earn in HAUWEE'S Lava Run.</p>
+                <p className="text-xl font-body font-bold mb-4 text-white">Hauwee's Lava Run</p>
+                <p className="text-tint-neutral/70 font-body text-sm leading-relaxed">Play to earn in the HAU ecosystem. Dodge the lava and collect points!</p>
               </div>
-              <div className="mt-6 text-[#ff00fc] font-mono text-xs tracking-wider uppercase opacity-75">Learn More &rarr;</div>
+              <div className="mt-6 text-[#ff00fc] font-mono text-xs tracking-wider uppercase opacity-75">Play Now &rarr;</div>
             </Link>
 
             {/* Hauwee NFT Card (Gold) */}
