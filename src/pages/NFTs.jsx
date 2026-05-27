@@ -137,67 +137,89 @@ const NFTs = () => {
         </div>
 
         {/* Progress Bar */}
-        <div className="bg-black/20 p-8 rounded-3xl border border-brand-purple/20">
-          <div className="flex justify-between items-end mb-4">
-            <div className="text-left">
-              <span className="text-sm font-bold text-nft-orange uppercase tracking-wider block mb-1">Mint Progress</span>
-              <span className="text-4xl font-display font-bold">{minted} <span className="text-2xl text-tint-neutral/50">/ {total}</span></span>
-            </div>
-            <div className="text-right text-tint-neutral/80 font-bold text-xl">
-              {percentage.toFixed(1)}%
-            </div>
-          </div>
-          <div className="h-6 w-full bg-brand-deep rounded-full overflow-hidden border border-brand-purple/30 mb-6 relative">
-            {loading && <div className="absolute inset-0 bg-white/5 z-10 animate-pulse"></div>}
-            <div
-              className="h-full bg-gradient-to-r from-brand-purple to-nft-orange rounded-full relative transition-all duration-1000 ease-out"
-              style={{ width: `${Math.min(100, percentage)}%` }}
-            >
-              <div className="absolute inset-0 bg-white/20 animate-pulse"></div>
-            </div>
+        <div className="relative group/counter w-full">
+          {/* Peeking NFT 1 */}
+          <div className="absolute top-[-85px] left-[-30px] sm:top-[-115px] sm:left-[-40px] w-28 h-28 sm:w-36 sm:h-36 z-0 pointer-events-none select-none transition-all duration-500 ease-out origin-bottom-right rotate-[-15deg] translate-x-3 translate-y-4 opacity-90 group-hover/counter:translate-x-0 group-hover/counter:translate-y-0 group-hover/counter:rotate-[-5deg] group-hover/counter:opacity-100">
+            <img 
+              src={`${import.meta.env.BASE_URL}assets/NFTs/BG NFT 1.png`} 
+              alt="Peeking NFT 1" 
+              className="w-full h-full object-contain drop-shadow-[0_8px_20px_rgba(124,58,237,0.4)]"
+            />
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center divide-x divide-brand-purple/20 border-t border-brand-purple/20 pt-6 relative">
-            {loading && <div className="absolute inset-0 bg-brand-dark/50 flex items-center justify-center backdrop-blur-[2px] z-10 rounded-b-3xl">
-              <span className="text-sm font-bold text-brand-purple animate-pulse">Loading live data...</span>
-            </div>}
-            <div>
-              <div className="text-xs text-tint-neutral/60 uppercase mb-1">Mint Price</div>
-              <div className="font-mono text-xl font-bold text-white">{mintPrice.toFixed(2)} SOL</div>
-            </div>
-            <div>
-              <div className="text-xs text-tint-neutral/60 uppercase mb-1">Floor Price</div>
-              <div className="font-mono text-xl font-bold text-white">{floorPrice.toFixed(3)} SOL</div>
-            </div>
-            <div>
-              <div className="text-xs text-tint-neutral/60 uppercase mb-1">Upside</div>
-              <div className={`font-mono text-xl font-bold ${upside >= 0 ? 'text-semantic-success' : 'text-semantic-error'}`}>
-                {upside > 0 ? '+' : ''}{upside.toFixed(1)}%
+          <div className="bg-black/20 p-8 rounded-3xl border border-brand-purple/20 relative z-10 backdrop-blur-md">
+            <div className="flex justify-between items-end mb-4">
+              <div className="text-left">
+                <span className="text-sm font-bold text-nft-orange uppercase tracking-wider block mb-1">Mint Progress</span>
+                <span className="text-4xl font-display font-bold">{minted} <span className="text-2xl text-tint-neutral/50">/ {total}</span></span>
+              </div>
+              <div className="text-right text-tint-neutral/80 font-bold text-xl">
+                {percentage.toFixed(1)}%
               </div>
             </div>
-            <div>
-              <div className="text-xs text-tint-neutral/60 uppercase mb-1">Remaining</div>
-              <div className="font-mono text-xl font-bold text-nft-orange">{Math.max(0, total - minted)}</div>
+            <div className="h-6 w-full bg-brand-deep rounded-full overflow-hidden border border-brand-purple/30 mb-6 relative">
+              {loading && <div className="absolute inset-0 bg-white/5 z-10 animate-pulse"></div>}
+              <div
+                className="h-full bg-gradient-to-r from-brand-purple to-nft-orange rounded-full relative transition-all duration-1000 ease-out"
+                style={{ width: `${Math.min(100, percentage)}%` }}
+              >
+                <div className="absolute inset-0 bg-white/20 animate-pulse"></div>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center divide-x divide-brand-purple/20 border-t border-brand-purple/20 pt-6 relative">
+              {loading && <div className="absolute inset-0 bg-brand-dark/50 flex items-center justify-center backdrop-blur-[2px] z-10 rounded-b-3xl">
+                <span className="text-sm font-bold text-brand-purple animate-pulse">Loading live data...</span>
+              </div>}
+              <div>
+                <div className="text-xs text-tint-neutral/60 uppercase mb-1">Mint Price</div>
+                <div className="font-mono text-xl font-bold text-white">{mintPrice.toFixed(2)} SOL</div>
+              </div>
+              <div>
+                <div className="text-xs text-tint-neutral/60 uppercase mb-1">Floor Price</div>
+                <div className="font-mono text-xl font-bold text-white">{floorPrice.toFixed(3)} SOL</div>
+              </div>
+              <div>
+                <div className="text-xs text-tint-neutral/60 uppercase mb-1">Upside</div>
+                <div className={`font-mono text-xl font-bold ${upside >= 0 ? 'text-semantic-success' : 'text-semantic-error'}`}>
+                  {upside > 0 ? '+' : ''}{upside.toFixed(1)}%
+                </div>
+              </div>
+              <div>
+                <div className="text-xs text-tint-neutral/60 uppercase mb-1">Remaining</div>
+                <div className="font-mono text-xl font-bold text-nft-orange">{Math.max(0, total - minted)}</div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* 2. Mint CTA Block */}
-      <section className="bg-gradient-to-r from-nft-orange/20 to-brand-purple/20 rounded-3xl p-8 sm:p-16 border border-nft-orange/30 text-center shadow-2xl shadow-nft-orange/10">
-        <h2 className="text-4xl sm:text-5xl font-bold mb-6">Mint is <span className="text-nft-orange">CHEAPER</span> than floor.<br />Do the math.</h2>
-        <p className="text-2xl mb-10 max-w-2xl mx-auto text-tint-neutral/90">
-          Secondaries sell at 0.3-0.45 SOL. That's up to 105% upside instantly. Why buy on ME when you can mint fresh?
-        </p>
-        <div className="flex flex-col sm:flex-row justify-center gap-6">
-          <Button href="https://launchmynft.io/sol/20352" variant="accent" className="text-xl px-12 py-5 font-bold">
-            Mint on LaunchMyNFT
-          </Button>
-          <Button href="https://magiceden.io/marketplace/hauwees" variant="secondary" className="text-xl px-12 py-5 font-bold bg-brand-deep/50">
-            Browse on Magic Eden
-          </Button>
+      <div className="relative group/mint max-w-4xl mx-auto w-full">
+        {/* Peeking NFT 2 */}
+        <div className="absolute top-[-85px] right-[-30px] sm:top-[-115px] sm:right-[-40px] w-28 h-28 sm:w-36 sm:h-36 z-0 pointer-events-none select-none transition-all duration-500 ease-out origin-bottom-left rotate-[15deg] -translate-x-3 translate-y-4 opacity-90 group-hover/mint:translate-x-0 group-hover/mint:translate-y-0 group-hover/mint:rotate-[5deg] group-hover/mint:opacity-100">
+          <img 
+            src={`${import.meta.env.BASE_URL}assets/NFTs/BG NFT 2.png`} 
+            alt="Peeking NFT 2" 
+            className="w-full h-full object-contain drop-shadow-[0_10px_25px_rgba(242,169,0,0.5)]"
+          />
         </div>
-      </section>
+
+        <section className="bg-gradient-to-r from-nft-orange/20 to-brand-purple/20 rounded-3xl p-8 sm:p-16 border border-nft-orange/30 text-center shadow-2xl shadow-nft-orange/10 relative z-10 backdrop-blur-md">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-6">Mint is <span className="text-nft-orange">CHEAPER</span> than floor.<br />Do the math.</h2>
+          <p className="text-2xl mb-10 max-w-2xl mx-auto text-tint-neutral/90">
+            Secondaries sell at 0.3-0.45 SOL. That's up to 105% upside instantly. Why buy on ME when you can mint fresh?
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-6">
+            <Button href="https://launchmynft.io/sol/20352" variant="accent" className="text-xl px-12 py-5 font-bold">
+              Mint on LaunchMyNFT
+            </Button>
+            <Button href="https://magiceden.io/marketplace/hauwees" variant="secondary" className="text-xl px-12 py-5 font-bold bg-brand-deep/50">
+              Browse on Magic Eden
+            </Button>
+          </div>
+        </section>
+      </div>
 
       {/* 3. NFT Showcase Gallery */}
       <section className="flex flex-col gap-10">

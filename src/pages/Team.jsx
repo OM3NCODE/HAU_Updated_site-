@@ -4,14 +4,14 @@ import Button from '../components/Button';
 
 const Team = () => {
   const coreTeam = [
-    { name: "Chris", role: "Core Team", countryCodes: ["us", "sg"], xHandle: "@PengWine", image: `${import.meta.env.BASE_URL}assets/hauwee_hero.png` },
-    { name: "Veronika", role: "Core Team", countryCodes: ["gb"], xHandle: "@VeronikaLKLK", image: `${import.meta.env.BASE_URL}assets/hauwee_hero.png` },
-    { name: "Sean", role: "Core Team", countryCodes: ["us"], xHandle: "@cryptoverlordx", image: `${import.meta.env.BASE_URL}assets/hauwee_hero.png` },
-    { name: "Adhish", role: "Core Team", countryCodes: ["in"], xHandle: "@IamAdhish2005", image: `${import.meta.env.BASE_URL}assets/hauwee_hero.png` },
-    { name: "4G", role: "Core Team", countryCodes: ["ng"], xHandle: "@4G_OFWeb3", image: `${import.meta.env.BASE_URL}assets/hauwee_hero.png` },
-    { name: "Shashank", role: "Core Team", countryCodes: ["in"], xHandle: "@shanks_ssk", image: `${import.meta.env.BASE_URL}assets/hauwee_hero.png` },
-    { name: "Lorin", role: "Core Team", countryCodes: ["sg"], xHandle: "@LorinWeb3", image: `${import.meta.env.BASE_URL}assets/hauwee_hero.png` },
-    { name: "Ziggy", role: "Core Team", countryCodes: ["sg"], xHandle: "@ziggy_hau", image: `${import.meta.env.BASE_URL}assets/hauwee_hero.png` },
+    { name: "Chris", role: " FOUNDER, Master Unicorn. Etcher of Rune,#1934", countryCodes: ["us", "sg"], xHandle: "@PengWine", image: `${import.meta.env.BASE_URL}assets/Profile Pictures/PengWine.jpeg` },
+    { name: "Veronika", role: "Project Advisor", countryCodes: ["gb"], xHandle: "@VeronikaLKLK", image: `${import.meta.env.BASE_URL}assets/Profile Pictures/Veronika.jpeg` },
+    { name: "Sean", role: " Artist", countryCodes: ["us"], xHandle: "@cryptoverlordx", image: `${import.meta.env.BASE_URL}assets/Profile Pictures/Cryptoverlord.jpg` },
+    { name: "Adhish", role: "Developer/Operations", countryCodes: ["in"], xHandle: "@IamAdhish2005", image: `${import.meta.env.BASE_URL}assets/Profile Pictures/Adhish.jpg` },
+    { name: "4G", role: "BAST Lead", countryCodes: ["ng"], xHandle: "@4G_OFWeb3", image: `${import.meta.env.BASE_URL}assets/Profile Pictures/4G.jpeg` },
+    { name: "Shashank", role: "Marketing ", countryCodes: ["in"], xHandle: "@shanks_ssk", image: `${import.meta.env.BASE_URL}assets/Profile Pictures/Shashank.jpg` },
+    { name: "Lorin", role: "Lead Developer", countryCodes: ["sg"], xHandle: "@LorinWeb3", image: `${import.meta.env.BASE_URL}assets/Profile Pictures/Lorin.jpg` },
+    { name: "Ziggy", role: "Marketing ", countryCodes: ["sg"], xHandle: "@ziggy_hau", image: `${import.meta.env.BASE_URL}assets/Profile Pictures/Ziggy.jpg` },
   ];
 
   const TeamCard = ({ member, index }) => {
