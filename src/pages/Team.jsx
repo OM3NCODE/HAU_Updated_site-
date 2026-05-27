@@ -10,7 +10,7 @@ const Team = () => {
     { name: "Adhish", role: "Developer/Operations", countryCodes: ["in"], xHandle: "@IamAdhish2005", image: `${import.meta.env.BASE_URL}assets/Profile Pictures/Adhish.jpg` },
     { name: "4G", role: "BAST Lead", countryCodes: ["ng"], xHandle: "@4G_OFWeb3", image: `${import.meta.env.BASE_URL}assets/Profile Pictures/4G.jpeg` },
     { name: "Shashank", role: "Marketing ", countryCodes: ["in"], xHandle: "@shanks_ssk", image: `${import.meta.env.BASE_URL}assets/Profile Pictures/Shashank.jpg` },
-    { name: "Lorin", role: "Lead Developer", countryCodes: ["sg"], xHandle: "@LorinWeb3", image: `${import.meta.env.BASE_URL}assets/Profile Pictures/Lorin.jpg` },
+    { name: "Lorin", role: "Founding Developer", countryCodes: ["sg"], xHandle: "", image: `${import.meta.env.BASE_URL}assets/Profile Pictures/Lorin.jpg` },
     { name: "Ziggy", role: "Marketing ", countryCodes: ["sg"], xHandle: "@ziggy_hau", image: `${import.meta.env.BASE_URL}assets/Profile Pictures/Ziggy.jpg` },
   ];
 
