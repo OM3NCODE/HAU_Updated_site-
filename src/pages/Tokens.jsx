@@ -41,10 +41,10 @@ const Tokens = () => {
                 <p className="text-lg text-white font-medium">The Community Token</p>
               </div>
               <div className="w-16 h-16 rounded-full border-2 border-brand-purple overflow-hidden flex items-center justify-center bg-nft-orange shadow-lg shadow-brand-purple/20 flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
-                <img 
-                  src={`${import.meta.env.BASE_URL}assets/hauwee_unicorn_avatar.png`} 
-                  alt="Hauwee Icon" 
-                  className="w-full h-full object-cover scale-105" 
+                <img
+                  src={`${import.meta.env.BASE_URL}assets/hauwee_unicorn_avatar.png`}
+                  alt="Hauwee Icon"
+                  className="w-full h-full object-cover scale-105"
                 />
               </div>
             </div>
@@ -92,14 +92,14 @@ const Tokens = () => {
           <div className="relative z-10">
             <div className="flex justify-between items-start mb-8">
               <div>
-                <h2 className="text-4xl font-bold text-token-ubp mb-2">$UBP</h2>
+                <h2 className="text-4xl font-bold text-token-ubp mb-2">$UBP (AKA LAVA LAMP)</h2>
                 <p className="text-lg text-white font-medium">The Game Token</p>
               </div>
               <div className="w-16 h-16 rounded-full border-2 border-token-ubp overflow-hidden flex items-center justify-center bg-black/40 shadow-lg shadow-token-ubp/25 flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
-                <img 
-                  src={`${import.meta.env.BASE_URL}assets/ubp_logo.jpg`} 
-                  alt="UBP Icon" 
-                  className="w-full h-full object-cover" 
+                <img
+                  src={`${import.meta.env.BASE_URL}assets/ubp_logo.jpg`}
+                  alt="UBP Icon"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
